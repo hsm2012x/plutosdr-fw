@@ -12,7 +12,8 @@
 	branch = maia-sdr
 [submodule "maia-sdr"]
 	path = maia-sdr
-	url = https://github.com/maia-sdr/maia-sdr.git
+	url = https://github.com/hsm2012x/maia-sdr-sumin.git
+	branch = ps-pl_impl
 [submodule "IQEngine"]
 	path = IQEngine
 	url = https://github.com/IQEngine/IQEngine
