@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Oct 20 04:40:46 2025
+# Process ID: 108
+# Current directory: /hdl/plutosdr-fw
+# Command line: vivado
+# Log file: /hdl/plutosdr-fw/vivado.log
+# Journal file: /hdl/plutosdr-fw/vivado.jou
+# Running On: sumin-Katana-17-B13VFK, OS: Linux, CPU Frequency: 400.000 MHz, CPU Physical cores: 10, Host memory: 16456 MB
+#-----------------------------------------------------------
+start_gui

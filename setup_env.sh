@@ -46,3 +46,4 @@ else
 	fi
 fi
 echo "Copy/paste those into your environment"
+WORKSPACE_HOST=/home/sumin/pluto_ws
