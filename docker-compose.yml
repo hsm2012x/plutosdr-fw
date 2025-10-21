@@ -1,0 +1,24 @@
+# docker-compose.yml
+# made by sumin
+version: "3.9"
+services:
+  kmu_sdr:
+    image: ghcr.io/maia-sdr/maia-sdr-devel:20250927
+    network_mode: "host"
+    environment:
+      - DISPLAY=${DISPLAY}
+      - TERM=${TERM:-xterm-256color}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix 
+      - vivado2023_2:/opt/Xilinx        
+      - kmu_home:/home       
+      - ${WORKSPACE_HOST}:/hdl
+    ulimits:
+      nofile:
+        soft: 1024
+        hard: 1048576
+    tty: true
+    stdin_open: true
+volumes:
+  vivado2023_2:
+  kmu_home:
