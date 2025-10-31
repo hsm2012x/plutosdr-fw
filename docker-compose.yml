@@ -1,17 +1,18 @@
 # docker-compose.yml
-# made by sumin
 version: "3.9"
 services:
   kmu_sdr:
     image: ghcr.io/maia-sdr/maia-sdr-devel:20250927
+    container_name: pluto_dev
+    hostname: pluto_dev
     network_mode: "host"
     environment:
       - DISPLAY=${DISPLAY}
       - TERM=${TERM:-xterm-256color}
     volumes:
-      - /tmp/.X11-unix:/tmp/.X11-unix 
-      - vivado2023_2:/opt/Xilinx        
-      - kmu_home:/home       
+      - /tmp/.X11-unix:/tmp/.X11-unix   # GUI Vivado 필요할 때
+      - vivado2023_2:/opt/Xilinx        # ← 아래 선언과 연결됨
+      - kmu_home:/home                  # ← 아래 선언과 연결됨
       - ${WORKSPACE_HOST}:/hdl
     ulimits:
       nofile:
@@ -19,6 +20,11 @@ services:
         hard: 1048576
     tty: true
     stdin_open: true
+
 volumes:
   vivado2023_2:
+    external: true
+    name: pluto_ws_vivado2023_2   # ← 이미 존재하는 Vivado 볼륨 이름
   kmu_home:
+    external: true
+    name: pluto_ws_kmu_home       # ← 이미 존재하는 홈 볼륨 이름(없으면 생성/변경)
